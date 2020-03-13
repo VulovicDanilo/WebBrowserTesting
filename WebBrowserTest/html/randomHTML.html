@@ -1,0 +1,35 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <script>
+        function test(message)
+        {
+            alert(window.external.GetSomeData());
+        }
+
+        function addData(message)
+        {
+            window.external.SetSomeData("Before");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="callClientCode()">
+
+        call client code from script code
+    </button>
+
+    <button onclick="test()">
+
+        call alert
+    </button>
+
+    <button onclick="addData()">
+
+        set data
+    </button>
+
+    <script src="../js/test.js"></script>
+</body>
+</html>
